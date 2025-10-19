@@ -2,8 +2,8 @@
 TermProject çalışma alanı
 ## 📂 Proje Yapısı
 <details>
-  <summary> Proje Yapısı (açmak için tıkla)</summary>
-  
+  <summary><span style="color:#1d4ed8; font-weight:700;">📘 Proje Yapısı (buraya tıkla)</span></summary>
+
 ```text
 COM5005-TermProject/
 ├─ index.html               # ANA SAYFA
