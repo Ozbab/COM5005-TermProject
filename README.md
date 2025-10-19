@@ -22,4 +22,5 @@ COM5005-TermProject/
 ├─ products.js              # LİSTELEME + (FILTER / SORT)
 ├─ product.js               # ÜRÜNÜN DETAYLARI (JS)
 └─ cart.js                  # SEPET(EKLEME/ÇIKARMA), FİYAT TOPLAMLARI (LOCAL STORAGE DAN)
-</details> ```
+```
+</details> 
