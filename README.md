@@ -3,6 +3,7 @@ TermProject çalışma alanı
 ## 📂 Proje Yapısı
 <details>
   <summary> Proje Yapısı (açmak için tıkla)</summary>
+  
 ```text
 COM5005-TermProject/
 ├─ index.html               # ANA SAYFA
