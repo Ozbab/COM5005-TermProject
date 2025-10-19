@@ -1,7 +1,6 @@
 # COM5005-TermProject
 TermProject çalışma alanı
 ## 📂 Proje Yapısı
-```markdown
 <details>
   <summary> Proje Yapısı (açmak için tıkla)</summary>
 ```text
