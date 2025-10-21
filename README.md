@@ -26,24 +26,27 @@ COM5005-TermProject/
 ```
 </details> 
 
+<details>
 ## Görev Dağılımı
 
-- 🧠 **Oğuzhan (Lider / Full Dev)** — Sepet + Genel JS Altyapı ⭐⭐⭐⭐  
-  Dosyalar: `cart.html`, `checkout.html`, `js/cart.js`, `js/app.js`, `assets/css/styles.css`  
-  İş: LocalStorage sepet, miktar ±, toplam/vergiler, ortak helper’lar (`getCart`,`setCart`,`formatPrice`,`renderCard`), checkout özeti, hata yönetimi.
+- **Oğuzhan - (Lider / Full Dev)** — Sepet + Genel JS Altyapı   
+  Dosyalar: `index.html`,`cart.html`, `checkout.html`, `js/cart.js`, `js/app.js`, `assets/css/styles.css`,`assets/icons/` 
+  İş: LocalStorage sepet, miktar ±, toplam/vergiler, ortak helper’lar (`getCart`,`setCart`,`formatPrice`,`renderCard`), checkout özeti, hata yönetimi.Navbar/footer, hero, kategori kartları, tema/typografi, responsive düzen
 
-- 🧩 **Üye 2 – Ürün Listeleme (Frontend JS + DOM)** ⭐⭐⭐  
+- **Yiğit   – Ürün Listeleme (Frontend JS + DOM)**   
   Dosyalar: `products.html`, `js/products.js`, `assets/css/products.css`  
   İş: Arama, kategori filtresi, fiyat/isim sıralama, kart render (data.js), “Ekle” → `cart.addItem`.
 
-- 🧾 **Üye 3 – Ürün Detay (Dinamik Sayfa + Event Handling)** ⭐⭐⭐  
+- **Sıla 3  - Ürün Detay (Dinamik Sayfa + Event Handling)**   
   Dosyalar: `product.html`, `js/product.js`, `assets/css/product.css`  
   İş: `?id=` ile ürün bulma, detay, galeri, “Sepete Ekle” → `cart.addItem`, benzer ürünler (ops.).
 
-- 🎨 **Üye 4 – UI / Ana Sayfa + Responsive Düzen** ⭐⭐  
-  Dosyalar: `index.html`, `assets/css/styles.css`, `assets/icons/`, `js/ui.js`  
-  İş: Navbar/footer, hero, kategori kartları, tema/typografi, responsive düzen.
+- **Melih 4 - Ödeme + Sepet**   
+  Dosyalar: , `assets/css/styles.css`, , `js/ui.js` ,`checkout.html`,`cart.html` 
+  İş: LocalStorage sepet, miktar ±, toplam/vergiler, ortak helper’lar (`getCart`,`setCart`,`formatPrice`,`renderCard`)
 
-- 🐣 **Üye 5 – Data & Statik Sayfalar (Acemi)** ⭐  
+- **Esra 5  - Data & Statik Sayfalar**   
   Dosyalar: `js/data.js`, `about.html`, `assets/img/`, `assets/css/about.css`  
   İş: Ürün verileri (id, name, price, image, category), Hakkımızda/İletişim + basit doğrulama, placeholder ve test.
+
+  </details> 
