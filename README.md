@@ -32,7 +32,7 @@ COM5005-TermProject/
 
 <details>
 ## Görev Dağılımı
-
+<summary><span style="color:#1d4ed8; font-weight:700;">Görev Dağılımı(buraya tıkla)</span></summary>
 - **Oğuzhan - (Lider / Full Dev)** — Sepet + Genel JS Altyapı  
   Dosyalar: `index.html`,`cart.html`, `checkout.html`, `js/cart.js`, `js/app.js`, `assets/css/styles.css`,`assets/icons/`
   İş: LocalStorage sepet, miktar ±, toplam/vergiler, ortak helper’lar (`getCart`,`setCart`,`formatPrice`,`renderCard`), checkout özeti, hata yönetimi.Navbar/footer, hero, kategori kartları, tema/typografi, responsive düzen
