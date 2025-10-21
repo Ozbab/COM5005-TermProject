@@ -27,25 +27,23 @@ COM5005-TermProject/
 </details> 
 
 ## Görev Dağılımı
-```text
- Oğuzhan - (Lider / Full Dev)
-Sepet + Genel JS Altyapı
-cart.html, checkout.html, js/cart.js, js/app.js, assets/css/styles.css (genel stiller)
-LocalStorage sepet sistemi, miktar artır/azalt, toplam hesaplama, ortak yardımcı fonksiyonlar (getCart, setCart, formatPrice, renderCard), ödeme özeti, hata yönetimi, projenin genel entegrasyonu
-Yiğit – Ürün Listeleme (Frontend JS + DOM)
-Ürün Listesi + Filtreleme + Arama
-products.html, js/products.js, assets/css/products.css
-Filtreleme, sıralama, kategori butonları, arama kutusu, ürün kartlarının dinamik olarak render edilmesi (data.js’ten)
-Sıla – Ürün Detay (Dinamik Sayfa + Event Handling)
-Ürün Detay + Sepete Ekle
-product.html, js/product.js, assets/css/product.css
-?id= parametresine göre ürün bulma, detay gösterme, “Sepete Ekle” butonunu ile cart.js fonksiyonuna bağlama, benzer ürünler kısmı (opsiyonel)
-Melih – UI / Ana Sayfa + Responsive Düzen + Sepet
-Ana Sayfa + Navbar/Footer
-index.html, assets/css/styles.css, assets/icons/, minik js/ui.js
-Navbar, hero alanı, kategori kartları, alt bilgi, tüm sitenin responsive görünümü, tema renkleri, görsel denge
-Esra – Data & Statik Sayfalar (Acemi)
-Veri + Hakkında Sayfası
-js/data.js, about.html, assets/img/, assets/css/about.css
-Ürün verilerini düzenleme (isim, fiyat, görsel yolları), Hakkında/İletişim sayfası, form doğrulama (basit JS), placeholder image ve test
-```
+
+- 🧠 **Oğuzhan (Lider / Full Dev)** — Sepet + Genel JS Altyapı ⭐⭐⭐⭐  
+  Dosyalar: `cart.html`, `checkout.html`, `js/cart.js`, `js/app.js`, `assets/css/styles.css`  
+  İş: LocalStorage sepet, miktar ±, toplam/vergiler, ortak helper’lar (`getCart`,`setCart`,`formatPrice`,`renderCard`), checkout özeti, hata yönetimi.
+
+- 🧩 **Üye 2 – Ürün Listeleme (Frontend JS + DOM)** ⭐⭐⭐  
+  Dosyalar: `products.html`, `js/products.js`, `assets/css/products.css`  
+  İş: Arama, kategori filtresi, fiyat/isim sıralama, kart render (data.js), “Ekle” → `cart.addItem`.
+
+- 🧾 **Üye 3 – Ürün Detay (Dinamik Sayfa + Event Handling)** ⭐⭐⭐  
+  Dosyalar: `product.html`, `js/product.js`, `assets/css/product.css`  
+  İş: `?id=` ile ürün bulma, detay, galeri, “Sepete Ekle” → `cart.addItem`, benzer ürünler (ops.).
+
+- 🎨 **Üye 4 – UI / Ana Sayfa + Responsive Düzen** ⭐⭐  
+  Dosyalar: `index.html`, `assets/css/styles.css`, `assets/icons/`, `js/ui.js`  
+  İş: Navbar/footer, hero, kategori kartları, tema/typografi, responsive düzen.
+
+- 🐣 **Üye 5 – Data & Statik Sayfalar (Acemi)** ⭐  
+  Dosyalar: `js/data.js`, `about.html`, `assets/img/`, `assets/css/about.css`  
+  İş: Ürün verileri (id, name, price, image, category), Hakkımızda/İletişim + basit doğrulama, placeholder ve test.
