@@ -1,0 +1,13 @@
+@{
+    var user = System.Web.HttpContext.Current.Session["AUTH_USER"] as string;
+}
+@if (string.IsNullOrEmpty(user))
+{
+  <a class="btn btn-primary" href="@Url.Action("Login","Account")">Giriş</a>
+  <a class="btn btn-outline-primary" href="@Url.Action("Register","Account")">Kayıt</a>
+}
+else
+{
+  <span class="align-self-center me-2">👋 @user</span>
+  <a class="btn btn-danger" href="@Url.Action("Logout","Account")">Çıkış</a>
+}
