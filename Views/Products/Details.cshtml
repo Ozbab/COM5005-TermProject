@@ -1,0 +1,27 @@
+@model COM5005.Web.Models.Product
+@{
+    ViewBag.Title = "Ürün Detayı";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    bool isLogged = (bool)(ViewBag.IsLogged ?? false);
+    bool hasFav = (bool)(ViewBag.HasFav ?? false);
+}
+<h1>@Model.Name</h1>
+<div class="row g-4">
+  <div class="col-md-6">
+    <div class="card p-5 text-center display-1">@Html.Raw(Model.Emoji ?? "🛍️")</div>
+  </div>
+  <div class="col-md-6">
+    <p class="lead">@Model.Description</p>
+    <h3>@Model.Price.ToString("C")</h3>
+    <div class="d-flex gap-2 mt-3">
+      @if(isLogged){
+        using (Html.BeginForm("AddToCart","Products", FormMethod.Post))
+        { @Html.Hidden("id", Model.Id) <button class="btn btn-primary">Sepete Ekle</button> }
+        using (Html.BeginForm("ToggleFav","Products", FormMethod.Post))
+        { @Html.Hidden("id", Model.Id) <button class="btn btn-outline-danger">@((hasFav)?"Favorilerden Çıkar":"Favorilere Ekle")</button> }
+      } else {
+        <a class="btn btn-primary" href="@Url.Action("Login","Account", new { returnUrl = Url.Action("Index","Cart") })">Giriş Yap</a>
+      }
+    </div>
+  </div>
+</div>
