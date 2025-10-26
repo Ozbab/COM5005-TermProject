@@ -1,6 +1,6 @@
 # COM5005-TermProject
 
-TermProject çalışma alanı
+TermProject Çalışma Alanı
 
 ## 📂 Proje Yapısı
 
