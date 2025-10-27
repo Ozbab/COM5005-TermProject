@@ -1,3 +1,6 @@
+<summary>
+<storng>Proje Yapısı</storng>
+
 COM5005-TermProject/
 ├─ COM5005.Web-YeniVersiyon.sln        # Çözüm dosyası (Visual Studio ile aç)
 ├─ COM5005.Web.csproj                  # Web projesi
@@ -56,6 +59,10 @@ COM5005-TermProject/
 └─ Areas/                              # Admin vb. ayrı alanlar için iskelet (opsiyonel)
    └─ README.md
 
+</summary> 
+<summary>
+<strong>Görev Dağılımı ve Sorumluluklar</strong>
+
 | Üye                                                                   | Sorumluluklar (Özet)                                                                                                        | İlgili Dosyalar / Klasörler                                                                                                                                                                                     |
 | --------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------ |
 | **Oğuzhan – Lider / Full Dev**                                        | **Mimari & entegrasyon**, route/filter, **Sepet & Ödeme akışının çekirdeği**, layout/tema, kod inceleme & merge             | `App_Start/*`, `Views/Shared/_Layout.cshtml`, `Controllers/CartController.cs` (çekirdek), `Controllers/CheckoutController.cs` (çekirdek), `Services/SessionCartService.cs` (çekirdek), `Services/*` entegrasyon |
@@ -63,4 +70,6 @@ COM5005-TermProject/
 | **Yiğit – Ürün Listeleme (Frontend + Controller)**                    | Ürün **listeleme, arama, filtre, sıralama, sayfalama**                                                                      | `Controllers/ProductsController.cs` (Index), `Views/Products/Index.cshtml`, `Repositories/InMemoryProductRepository.cs`, `Content/site.css` (liste/grid)                                                        |
 | **Sıla – Ürün Detay (Routing + Model Binding)**                       | Ürün **detay sayfası**, benzer ürünler, **“Sepete Ekle”** akışı (servise çağrı), hata durumları                             | `Controllers/ProductsController.cs` (Details), `Views/Products/Details.cshtml`, `Services/SessionCartService.cs` (kullanım)                                                                                     | 
 | **Esra – Statik & Basit Formlar (Auth giriş sayfalarına dokunmadan)** | **About / Contact** sayfaları, basit form doğrulama (JS/Razor), küçük UI düzeltmeleri                                       | `Views/Shared/_Layout.cshtml` (linkler), `Views/Home/Index.cshtml` (hero/CTA), `Views/Static/About.cshtml` *(istersen eklersin)*, `Views/Static/Contact.cshtml` *(istersen eklersin)*, `Content/site.css`       |
+</summary>
+
                                                                                                                           
