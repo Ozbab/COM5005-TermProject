@@ -116,11 +116,3 @@ COM5005-TermProject/
 - **GitHub Pages / Vercel** — Statik dokümantasyon/önizleme (server-side çalışmaz)
 
 ---
-
-## 📅 Ne Zaman Hangi Araç?
-
-- **Hafta 7–8**: Visual Studio, Git/GitHub, In-Memory Repo, Session, (izinliyse) Bootstrap, draw.io/Mermaid
-- **Hafta 9–10**: Auth & Guard’lar, DevTools/Lighthouse ile UI/UX ince ayar
-- **Hafta 11–12**: Favoriler, Checkout mock; test/bugfix; PR ritmi
-- **Hafta 13**: Refactor, README/dokümantasyon; erişilebilirlik/performans gözden geçirme
-- **Hafta 14**: (Opsiyonel) Azure/IIS’e demo deploy + tag/release
