@@ -1,3 +1,5 @@
+## Project Detail
+```text
 
 project/
 ├─ index.html
@@ -35,3 +37,4 @@ project/
    ├─ search.js               # ayrı sayfa kullanıyorsan
    ├─ form-validate.js        # contact form vb.
    └─ toast.js                # bildirim/toast
+```
