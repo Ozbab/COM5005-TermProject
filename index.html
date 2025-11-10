@@ -11,7 +11,7 @@
 <body>
     <header>
         <nav>
-            <div class="logo">📚 BookBazaar</div>
+            <div class="logo">BookBazaar</div>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
@@ -19,15 +19,21 @@
             </ul>
             <div class="nav-icons">
                 <a href="#" class="icon-btn" id="cartBtn" title="Cart" onclick="showCart(); return false;">
-                    <span class="icon">🛒</span>
+                    <span class="icon">
+                        <img src="img/shopping_cart.png" alt="Cart">
+                    </span>
                     <span class="icon-badge" id="cartCountNav">0</span>
                 </a>
                 <a href="#" class="icon-btn" id="favoritesBtn" title="Favorites">
-                    <span class="icon">❤️</span>
+                    <span class="icon">
+                        <img src="img/favorite.png" alt="Favorites">
+                    </span>
                     <span class="icon-badge" id="favoritesCount">0</span>
                 </a>
                 <a href="#" class="icon-btn" id="profileBtn" title="Profile">
-                    <span class="icon">👤</span>
+                    <span class="icon">
+                        <img src="img/account.png" alt="Profile">
+                    </span>
                 </a>
             </div>
         </nav>
@@ -105,7 +111,7 @@
         </div>
         
         <div class="search-bar">
-            <span class="search-icon">🔍</span>
+            <span class="search-icon"><img src="img/search.png" alt="search-icon" srcset=""></span>
             <input type="text" id="searchInput" placeholder="Author, book, ISBN...">
         </div>
     </div>
@@ -113,22 +119,22 @@
     <div class="container" id="products">
         <div class="featured-sections">
             <section class="featured-section" id="new-releases">
-                <h2 class="section-title">🆕 New Releases</h2>
+                <h2 class="section-title">New Releases</h2>
                 <div class="products" id="newReleasesGrid"></div>
             </section>
             
             <section class="featured-section">
-                <h2 class="section-title">🔥 Bestsellers</h2>
+                <h2 class="section-title">Bestsellers</h2>
                 <div class="products" id="bestsellersGrid"></div>
             </section>
             
             <section class="featured-section">
-                <h2 class="section-title">⭐ Editor's Choice</h2>
+                <h2 class="section-title">Editor's Choice</h2>
                 <div class="products" id="editorsChoiceGrid"></div>
             </section>
             
             <section class="featured-section">
-                <h2 class="section-title">💰 On Sale</h2>
+                <h2 class="section-title">On Sale</h2>
                 <div class="products" id="onSaleGrid"></div>
             </section>
         </div>

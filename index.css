@@ -41,6 +41,7 @@ nav {
     max-width: 1400px;
     margin: 0 auto;
     padding: 0 2rem;
+    height: 60px;
 }
 
 .logo {
@@ -69,6 +70,7 @@ nav a:hover {
     display: flex;
     align-items: center;
     gap: 1rem;
+    height: 100%;
 }
 
 .icon-btn {
@@ -76,8 +78,8 @@ nav a:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 40px;
-    height: 40px;
+    width: 42px;
+    height: 42px;
     background: rgba(255, 255, 255, 0.2);
     border-radius: 50%;
     color: white;
@@ -93,6 +95,18 @@ nav a:hover {
 
 .icon {
     font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon img {
+    width: 24px;
+    height: 24px;
+    filter: brightness(0) invert(1);    /* black->white */
+}
+.icon img[src*="favorited.svg"]{
+    filter: none !important;
 }
 
 .icon-badge {
@@ -235,6 +249,7 @@ nav a:hover {
 .search-icon {
     position: absolute;
     left: 1.2rem;
+    top: 1rem;
     font-size: 1.2rem;
     color: var(--muted);
     pointer-events: none;
@@ -311,6 +326,7 @@ nav a:hover {
     -webkit-box-orient: vertical;
     line-height: 1.4;
     min-height: 2.8em;
+    word-break: break-word;
 }
 
 .product-info p {
@@ -331,14 +347,25 @@ nav a:hover {
 
 .add-to-cart {
     width: 100%;
-    padding: 0.7rem;
+    padding: 0.8rem;
     background: var(--primary);
     color: white;
     border: none;
     border-radius: 8px;
     cursor: pointer;
     font-size: 0.95rem;
+    font-weight: 600;
     transition: background 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.add-to-cart img {
+    width: 22px;
+    height: 22px;
+    filter: brightness(0) invert(1);
 }
 
 .add-to-cart:hover {
@@ -360,23 +387,25 @@ nav a:hover {
 .favorite-btn {
     background: none;
     border: none;
-    font-size: 1.3rem;
     cursor: pointer;
     padding: 0.2rem;
     transition: transform 0.3s;
-    opacity: 0.6;
     flex-shrink: 0;
     margin-left: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.favorite-btn img {
+    width: 26px;
+    height: 26px;
+    transition: all 0.3s;
+    display: block;
 }
 
 .favorite-btn:hover {
-    transform: scale(1.2);
-    opacity: 1;
-}
-
-.favorite-btn.active {
-    opacity: 1;
-    filter: drop-shadow(0 0 3px rgba(239, 68, 68, 0.5));
+    transform: scale(1.15);
 }
 
 .skeleton {

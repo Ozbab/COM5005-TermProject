@@ -19,6 +19,18 @@ function showSkeletonLoader(grid, count = 6) {
     }
 }
 
+function getStarRatingHTML(rating) {
+    let stars = '';
+    for (let i = 1; i <= 5; i++) {
+        if (i <= rating) {
+            stars += '<i class="fa-solid fa-star"></i>';
+        } else {
+            stars += '<i class="fa-regular fa-star"></i>';
+        }
+    }
+    return `<div class="product-rating">${stars} <span class="rating-number">(${rating}.0)</span></div>`;
+}
+
 function renderProducts(list) {
     const grid = document.getElementById('productsGrid');
     if (!grid) return;
@@ -32,16 +44,22 @@ function renderProducts(list) {
             const card = document.createElement('div');
             card.className = 'product-card';
             const isFavorite = favorites.includes(b.id);
+            const favoriteIcon = isFavorite ? 'img/favorited.svg' : 'img/favorite.png';
             card.innerHTML = `
                 <div class="product-img">${b.emoji}</div>
                 <div class="product-info">
                     <div class="product-header">
                         <h3>${b.title}</h3>
-                        <button class="favorite-btn ${isFavorite ? 'active' : ''}" onclick="toggleFavorite(${b.id})" title="Add to favorites">❤️</button>
+                        <button class="favorite-btn ${isFavorite ? 'active' : ''}" onclick="toggleFavorite(${b.id})" title="Add to favorites">
+                            <img src="${favoriteIcon}" alt="Favorite" class="favorite-icon">
+                        </button>
                     </div>
                     <p>${b.author} • ${b.genre}</p>
                     <div class="price">${b.price} ₺</div>
-                    <button class="add-to-cart">Add to Cart</button>
+                    <button class="add-to-cart">
+                        <img src="img/add_shopping_cart.png" alt="Add">
+                        Add to Cart
+                    </button>
                 </div>
             `;
             card.querySelector('.add-to-cart').addEventListener('click', () => addToCart(b));
@@ -147,17 +165,29 @@ window.toggleFavorite = function(bookId) {
     let favorites = JSON.parse(localStorage.getItem('favorites') || '[]');
     const index = favorites.indexOf(bookId);
     const btn = event.target.closest('.favorite-btn');
+    const img = btn ? btn.querySelector('img') : null;
     
     if (index > -1) {
+        // Remove from favorites
         favorites.splice(index, 1);
         if (btn) btn.classList.remove('active');
+        if (img) {
+            img.src = 'img/favorite.png';
+            img.style.filter = '';
+        }
         showNotification('Removed from favorites');
     } else {
+        // Add to favorites
         favorites.push(bookId);
         if (btn) btn.classList.add('active');
+        if (img) {
+            img.src = 'img/favorited.svg';
+            img.style.filter = '';
+        }
         showNotification('Added to favorites');
     }
     localStorage.setItem('favorites', JSON.stringify(favorites));
+    updateNavbarFavoriteIcon();
     updateFavoritesCount();
 }
 
@@ -202,16 +232,22 @@ function renderFeaturedSection(gridId, bookList) {
             card.className = 'product-card';
             const favorites = JSON.parse(localStorage.getItem('favorites') || '[]');
             const isFavorite = favorites.includes(b.id);
+            const favoriteIcon = isFavorite ? 'img/favorited.svg' : 'img/favorite.png';
             card.innerHTML = `
                 <div class="product-img">${b.emoji}</div>
                 <div class="product-info">
                     <div class="product-header">
                         <h3>${b.title}</h3>
-                        <button class="favorite-btn ${isFavorite ? 'active' : ''}" onclick="toggleFavorite(${b.id})" title="Add to favorites">❤️</button>
+                        <button class="favorite-btn ${isFavorite ? 'active' : ''}" onclick="toggleFavorite(${b.id})" title="Add to favorites">
+                            <img src="${favoriteIcon}" alt="Favorite" class="favorite-icon">
+                        </button>
                     </div>
                     <p>${b.author} • ${b.genre}</p>
                     <div class="price">${b.price} ₺</div>
-                    <button class="add-to-cart">Add to Cart</button>
+                    <button class="add-to-cart">
+                        <img src="img/add_shopping_cart.png" alt="Add">
+                        Add to Cart
+                    </button>
                 </div>
             `;
             card.querySelector('.add-to-cart').addEventListener('click', () => addToCart(b));
@@ -258,9 +294,18 @@ function startCarousel() {
     carouselInterval = setInterval(nextSlide, 5000);
 }
 
+function updateNavbarFavoriteIcon() {
+    const favorites = JSON.parse(localStorage.getItem('favorites') || '[]');
+    const navIcon = document.querySelector('#favoritesBtn img');
+    if (navIcon) {
+        navIcon.src = favorites.length > 0 ? 'img/favorited.svg' : 'img/favorite.png';
+    }
+}
+
 document.addEventListener('DOMContentLoaded', () => {
     updateCartCount();
     updateFavoritesCount();
+    updateNavbarFavoriteIcon();
     renderProducts(books);
     
     const slides = document.querySelectorAll('.hero-slide');
