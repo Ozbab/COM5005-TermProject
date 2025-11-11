@@ -46,7 +46,7 @@ function renderProducts(list) {
             const isFavorite = favorites.includes(b.id);
             const favoriteIcon = isFavorite ? 'img/favorited.svg' : 'img/favorite.png';
             card.innerHTML = `
-                <div class="product-img"><img src="${b.image}" alt="${b.title}" class="book-cover"></div>
+                <div class="product-img">${b.emoji}</div>
                 <div class="product-info">
                     <div class="product-header">
                         <h3>${b.title}</h3>
@@ -94,14 +94,14 @@ function showCart() {
     if (cart.length === 0) {
         alert('Your cart is empty!');
     } else {
-
+        // Count quantities
         const itemCounts = {};
         cart.forEach(book => {
             const key = book.title;
             itemCounts[key] = (itemCounts[key] || 0) + 1;
         });
         
-
+        // Build display message
         let message = 'In your cart:\n\n';
         Object.entries(itemCounts).forEach(([title, count]) => {
             message += `${title} × ${count}\n`;
@@ -168,23 +168,23 @@ window.toggleFavorite = function(bookId) {
     const img = btn ? btn.querySelector('img') : null;
     
     if (index > -1) {
-
+        // Remove from favorites
         favorites.splice(index, 1);
         if (btn) btn.classList.remove('active');
         if (img) {
             img.src = 'img/favorite.png';
             img.style.filter = '';
         }
-        showNotification('Removed from favorites','error');     // error bg red
+        showNotification('Removed from favorites');
     } else {
-
+        // Add to favorites
         favorites.push(bookId);
         if (btn) btn.classList.add('active');
         if (img) {
             img.src = 'img/favorited.svg';
             img.style.filter = '';
         }
-        showNotification('Added to favorites','success');       // success bg green
+        showNotification('Added to favorites');
     }
     localStorage.setItem('favorites', JSON.stringify(favorites));
     updateNavbarFavoriteIcon();
@@ -234,7 +234,7 @@ function renderFeaturedSection(gridId, bookList) {
             const isFavorite = favorites.includes(b.id);
             const favoriteIcon = isFavorite ? 'img/favorited.svg' : 'img/favorite.png';
             card.innerHTML = `
-                <div class="product-img"><img src="${b.image}" alt="${b.title}" class="book-cover"></div>
+                <div class="product-img">${b.emoji}</div>
                 <div class="product-info">
                     <div class="product-header">
                         <h3>${b.title}</h3>

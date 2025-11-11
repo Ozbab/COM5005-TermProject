@@ -24,15 +24,6 @@ body {
     background: var(--bg);
 }
 
-.web-logo {
-    width: 65px;
-    height: 65px;
-    object-fit: cover;
-    border-radius: 25%;
-    background-color: #ffffff;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-}
-
 header {
     background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
     color: white;
@@ -54,16 +45,9 @@ nav {
 }
 
 .logo {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.75rem;
-    font-size: 1.9rem;
-    font-weight: 800;
-    color: #ffffff;
-    letter-spacing: 0.03em;
+    font-size: 1.8rem;
+    font-weight: bold;
     text-decoration: none;
-    cursor: pointer;
-    line-height: 1;
 }
 
 nav ul {
@@ -119,7 +103,7 @@ nav a:hover {
 .icon img {
     width: 24px;
     height: 24px;
-    filter: brightness(0) invert(1);    
+    filter: brightness(0) invert(1);    /* black->white */
 }
 .icon img[src*="favorited.svg"]{
     filter: none !important;
@@ -312,19 +296,12 @@ nav a:hover {
 
 .product-img {
     width: 100%;
-    height: 120px; 
-    padding: 0.35rem;
+    height: 120px;
     background: linear-gradient(135deg, #ffffff 0%, #F3EDE2 100%);
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-.product-img img {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain;
-    display: block;
+    font-size: 3.5rem;
 }
 
 .product-info {
@@ -531,8 +508,8 @@ footer {
 }
 
 .footer-section .contact-link {
-    color: var(--bg);
-    text-decoration: none;
+    color: var(--secondary);
+    text-decoration: underline;
     cursor: pointer;
 }
 

@@ -15,6 +15,7 @@ function animateCounter(element) {
     }, 16);
 }
 
+// Intersection Observer ile sayaçları başlat
 const observerOptions = {
     threshold: 0.5
 };
@@ -37,6 +38,7 @@ if (statsSection) {
     observer.observe(statsSection);
 }
 
+// Kartlar için hover efekti
 document.querySelectorAll('.value-card').forEach(card => {
     card.addEventListener('mouseenter', function() {
         this.style.background = 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)';
@@ -50,16 +52,3 @@ document.querySelectorAll('.value-card').forEach(card => {
         this.querySelector('p').style.color = '#666';
     });
 });
-
-function toggleFAQ(element) {
-    const faqItem = element.parentElement;
-    const isActive = faqItem.classList.contains('active');
-    
-    document.querySelectorAll('.faq-item').forEach(item => {
-        item.classList.remove('active');
-    });
-    
-    if (!isActive) {
-        faqItem.classList.add('active');
-    }
-}

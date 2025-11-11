@@ -31,10 +31,6 @@ header {
     z-index: 100;
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
-header img{
-    height:40px;
-    width:auto;
-}
 
 nav {
     display: flex;
@@ -257,7 +253,7 @@ nav a:hover {
     align-items: flex-start;
     gap: 0.5rem;
     cursor: pointer;
-    font-size: 1rem;
+    font-size: 0.95rem;
     color: var(--text);
 }
 
@@ -286,10 +282,6 @@ nav a:hover {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 1.5rem;
-}
-.faq-shortcuts-grid img{
-    width: 2rem;
-    height: 2rem;
 }
 
 .faq-shortcut-card {
@@ -337,36 +329,29 @@ nav a:hover {
 
 .social-links {
     display: flex;
-    gap: 1.5rem;
+    gap: 1rem;
     margin-top: 2rem;
-    align-items: center;
 }
 
 .social-btn {
-    display: inline-flex;
+    display: flex;
     align-items: center;
     justify-content: center;
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+    color: white;
     border-radius: 50%;
-    overflow: hidden;
-    background-color: #ffffff;
-    box-shadow: 0 6px 14px rgba(0,0,0,0.10);
-    cursor: pointer;
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
-}
-
-.social-btn img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
+    text-decoration: none;
+    font-size: 1.5rem;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .social-btn:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 10px 22px rgba(0,0,0,0.18);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(124, 58, 237, 0.25);
 }
+
 footer {
     background: var(--footer);
     color: white;
